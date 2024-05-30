@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  #top-navigation {
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 0;
+  }
+  
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .logo img {
+    height: 50px;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  
+  .contact-button .button {
+    background-color: #9D874D;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .header {
+    width: 100%;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #9D874D;
+  }
+
+  .header .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header-text {
+    position: relative;
+    text-align: center;
+    padding: 220px 20px 60px 20px;
+    font-size: 20px;
+    color: #ffffff;
+  }
+  
+  .reserve-button .button {
+    background-color: #000000;
+    color: #9D874D;
+    padding: 20px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    font-size: 25px;
+  }
+
+  .menu-section {
+    background-color: #4F4427;
+    padding: 40px 10px;
+  }
+
+  .menu-text {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+
+  .menu-table {
+    border: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .menu-table table, tr, td {
+    padding: 10px 40px;
+  }
+
+  .about-section {
+    background-color: #FFDB7D;
+    padding: 40px 10px;
+  }
+
+  .about-table {
+    border: none;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about-text {
+    color: #9D874D;
+  }
+
+
+  #review-section .review-container {
+    width: 100%;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 40px - 64px */
+    gap: clamp(2.5rem, 4.5vw, 4rem);
+    background-color: #fffbc9; 
+  }
+  #review-section .review-title {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  #review-section .review-card {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    /* 16px - 20px */
+    gap: clamp(1rem, 2.5vw, 1.25rem);
+  }
+  #review-section .comment-card {
+    list-style: none;
+    width: 100%;
+    /* 20px - 40px top & bottom */
+    /* 20px - 40px left & right */
+    padding: clamp(1.25rem, 3.15vw, 2.5rem) clamp(1.25rem, 3.15vw, 2.5rem);
+    background-color: #f7f7f7;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    display: flex;
+    grid-column: span 12;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+    /* 24px - 48px */
+    gap: clamp(1.5rem, 4vw, 3rem);
+  }
+  #review-section .cs-flex-group {
+    /* this margin top auto will push everything up and force the cs-flex-group to the bottom of the container. This is to account for review cards with different heights because of more or less text and makes the cards more responsive to changing text */
+    margin-top: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  #review-section .cs-profile {
+    width: 3.25rem;
+    height: auto;
+    border-radius: 50%;
+    position: relative;
+    display: block;
+  }
+  #review-section .cs-profile img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* makes the image behave like a background image */
+    object-fit: cover;
+  }
+  #review-section .cs-name {
+    /* 20px - 25px */
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0;
+    /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+    margin-top: auto;
+    color: var(--headerColor);
+    display: block;
+  }
+  #review-section .cs-job {
+    /* 14px - 16px */
+    font-size: 1rem;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin: 0;
+    color: var(--bodyTextColor);
+    display: block;
+  }
+  #review-section .wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #review-section .cs-item-stars {
+    width: 6.75rem;
+    height: auto;
+  }
+  #review-section .cs-review {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.6vw, 1.25rem);
+    line-height: 1.5em;
+    margin: 0;
+    color: var(--bodyTextColor);
+    z-index: 1;
+  }
+  #review-section .cs-quote {
+    width: 5.375rem;
+    height: auto;
+    position: absolute;
+    right: 0rem;
+    bottom: 0rem;
+    z-index: 0;
+  }
+
+  #footer-section {
+    background-color: #000000;
+  }
+
+  .footer-top img{
+    float: left;
+    margin: 10px 5px 5px 100px;
+  }
+  
+  .footer-top h3 {
+    color: #fff;
+    padding: 25px 0px;
+  }
+
+  .footer-middle th, td {
+    color: #fff;
+    padding: 10px 0px;
+    width: 400px;
+    text-align: center;
+  }
+
+  .footer-links ul {
+    list-style: none;
+  }
+
+  .footer-links li {
+    padding: 10px 30px;
+  }
+
+  .footer-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .footer-contacts td {
+    color: #fff;
+    padding: 10px 10px;
+    width: 200px;
+  }
+
+  .footer-bottom {
+    color: #ffffff;
+    text-align: center;
+    background-color: #1a1a1a;
+    padding: 10px 0px;
+  }
